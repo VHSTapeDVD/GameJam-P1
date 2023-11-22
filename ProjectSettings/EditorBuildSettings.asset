@@ -14,4 +14,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/EndScreen.unity
     guid: 3437e6af20569426ca2c5b3d32fa0af4
+  - enabled: 1
+    path: Assets/Scenes/Healthbar.unity
+    guid: e40d9bb540b5748529c9b4d822062c4e
   m_configObjects: {}
