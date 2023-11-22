@@ -1,0 +1,444 @@
+fileFormatVersion: 2
+guid: fa5f1ba051d89ee4594282f282eeab8b
+ScriptedImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 2
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+  script: {fileID: 11500000, guid: 62a9f0aa5b59740cfbadc7e5f9823bb0, type: 3}
+  textureImporterSettings:
+    alphaSource: 1
+    mipMapMode: 0
+    enableMipMap: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+    convertToNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+    swizzle: 50462976
+    isReadable: 0
+    streamingMipmaps: 0
+    streamingMipmapsPriority: 0
+    vTOnly: 0
+    ignoreMipmapLimit: 0
+    nPOTScale: 1
+    sRGBTexture: 1
+    spriteMode: 2
+    spriteExtrude: 1
+    spriteMeshType: 1
+    alignment: 0
+    spritePivot: {x: 0.5, y: 0.5}
+    spritePixelsToUnits: 100
+    spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+    spriteGenerateFallbackPhysicsShape: 0
+    generateCubemap: 6
+    cubemapConvolution: 0
+    seamlessCubemap: 0
+    alphaIsTransparency: 1
+    spriteTessellationDetail: -1
+    textureType: 8
+    textureShape: 1
+    singleChannelComponent: 0
+    flipbookRows: 0
+    flipbookColumns: 0
+    ignorePngGamma: 0
+    cookieMode: 0
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+    normalMap: 0
+    textureFormat: 0
+    maxTextureSize: 0
+    lightmap: 0
+    compressionQuality: 0
+    linearTexture: 0
+    grayScaleToAlpha: 0
+    rGBM: 0
+    cubemapConvolutionSteps: 0
+    cubemapConvolutionExponent: 0
+    maxTextureSizeSet: 0
+    compressionQualitySet: 0
+    textureFormatSet: 0
+    applyGammaDecoding: 0
+  previousAsepriteImporterSettings:
+    fileImportMode: 1
+    importHiddenLayers: 0
+    layerImportMode: 1
+    defaultPivotSpace: 0
+    defaultPivotAlignment: 7
+    customPivotPosition: {x: 0.5, y: 0.5}
+    spritePadding: 0
+    generateModelPrefab: 1
+    generateAnimationClips: 1
+    addSortingGroup: 1
+    addShadowCasters: 0
+  asepriteImporterSettings:
+    fileImportMode: 1
+    importHiddenLayers: 0
+    layerImportMode: 1
+    defaultPivotSpace: 0
+    defaultPivotAlignment: 7
+    customPivotPosition: {x: 0.5, y: 0.5}
+    spritePadding: 0
+    generateModelPrefab: 1
+    generateAnimationClips: 1
+    addSortingGroup: 1
+    addShadowCasters: 0
+  importFileNodeState: 1
+  platformSettingsDirtyTick: 0
+  textureAssetName: 
+  singleSpriteImportData:
+  - name: 
+    originalName: 
+    pivot: {x: 0, y: 0}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 0
+      y: 0
+      width: 0
+      height: 0
+    spriteID: 
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 0, y: 0}
+  animatedSpriteImportData:
+  - name: Spoder gets stomped_Frame_0
+    originalName: 
+    pivot: {x: 0.5, y: -0.09756097}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 4
+      width: 62
+      height: 41
+    spriteID: ffc5df035cc23c54bbc9ff4d6d63fdf4
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 4, y: 4}
+  - name: Spoder gets stomped_Frame_1
+    originalName: 
+    pivot: {x: 0.5, y: -0.102564104}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 74
+      y: 4
+      width: 62
+      height: 39
+    spriteID: 57707d404b4bf0a419949a4ff1541b11
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 74, y: 4}
+  - name: Spoder gets stomped_Frame_2
+    originalName: 
+    pivot: {x: 0.49206352, y: -0.14285715}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 144
+      y: 4
+      width: 63
+      height: 35
+    spriteID: d0175af11cf4d9a489c9247220b8213d
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 144, y: 4}
+  - name: Spoder gets stomped_Frame_3
+    originalName: 
+    pivot: {x: 0.49206352, y: -0.14705883}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 53
+      width: 63
+      height: 34
+    spriteID: db828db4bda73ca42b923c6e42412fb8
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 4, y: 53}
+  - name: Spoder gets stomped_Frame_4
+    originalName: 
+    pivot: {x: 0.49206352, y: -0.1875}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 75
+      y: 53
+      width: 63
+      height: 32
+    spriteID: effd8e8744c0f3645a2428ef28592ff0
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 75, y: 53}
+  - name: Spoder gets stomped_Frame_5
+    originalName: 
+    pivot: {x: 0.49206352, y: -0.19354838}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 146
+      y: 53
+      width: 63
+      height: 31
+    spriteID: 8595521d73659d549b94e35973036334
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 146, y: 53}
+  - name: Spoder gets stomped_Frame_6
+    originalName: 
+    pivot: {x: 0.49206352, y: -0.25}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 95
+      width: 63
+      height: 28
+    spriteID: 7ac426edeee826e4fb1a76f144108625
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 4, y: 95}
+  - name: Spoder gets stomped_Frame_7
+    originalName: 
+    pivot: {x: 0.5254237, y: -0.2962963}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 75
+      y: 95
+      width: 59
+      height: 27
+    spriteID: 5a2b7d71cefbf4442a3ee8b83f52f82a
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 75, y: 95}
+  - name: Spoder gets stomped_Frame_8
+    originalName: 
+    pivot: {x: 0.5254237, y: -0.34615386}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 142
+      y: 95
+      width: 59
+      height: 26
+    spriteID: a3f5389e91708b142a1a635b29304158
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 142, y: 95}
+  - name: Spoder gets stomped_Frame_9
+    originalName: 
+    pivot: {x: 0.5254237, y: -0.375}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 131
+      width: 59
+      height: 24
+    spriteID: 1418324f482f06f4285899a94d4b8757
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 4, y: 131}
+  - name: Spoder gets stomped_Frame_10
+    originalName: 
+    pivot: {x: 0.5254237, y: -0.39130434}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 71
+      y: 131
+      width: 59
+      height: 23
+    spriteID: d7b96a99ee8eff142b970fd12240d6b6
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 71, y: 131}
+  spriteSheetImportData: []
+  asepriteLayers:
+  - layerIndex: 0
+    guid: 2107337606
+    name: Spoder gets stomped
+    layerFlags: 0
+    layerType: 0
+    blendMode: 0
+    cells:
+    - name: Spoder gets stomped_Frame_0
+      frameIndex: 0
+      cellRect:
+        x: 1
+        y: 4
+        width: 62
+        height: 41
+      spriteId: ffc5df035cc23c54bbc9ff4d6d63fdf4
+    - name: Spoder gets stomped_Frame_1
+      frameIndex: 1
+      cellRect:
+        x: 1
+        y: 4
+        width: 62
+        height: 39
+      spriteId: 57707d404b4bf0a419949a4ff1541b11
+    - name: Spoder gets stomped_Frame_2
+      frameIndex: 2
+      cellRect:
+        x: 1
+        y: 5
+        width: 63
+        height: 35
+      spriteId: d0175af11cf4d9a489c9247220b8213d
+    - name: Spoder gets stomped_Frame_3
+      frameIndex: 3
+      cellRect:
+        x: 1
+        y: 5
+        width: 63
+        height: 34
+      spriteId: db828db4bda73ca42b923c6e42412fb8
+    - name: Spoder gets stomped_Frame_4
+      frameIndex: 4
+      cellRect:
+        x: 1
+        y: 6
+        width: 63
+        height: 32
+      spriteId: effd8e8744c0f3645a2428ef28592ff0
+    - name: Spoder gets stomped_Frame_5
+      frameIndex: 5
+      cellRect:
+        x: 1
+        y: 6
+        width: 63
+        height: 31
+      spriteId: 8595521d73659d549b94e35973036334
+    - name: Spoder gets stomped_Frame_6
+      frameIndex: 6
+      cellRect:
+        x: 1
+        y: 7
+        width: 63
+        height: 28
+      spriteId: 7ac426edeee826e4fb1a76f144108625
+    - name: Spoder gets stomped_Frame_7
+      frameIndex: 7
+      cellRect:
+        x: 1
+        y: 8
+        width: 59
+        height: 27
+      spriteId: 5a2b7d71cefbf4442a3ee8b83f52f82a
+    - name: Spoder gets stomped_Frame_8
+      frameIndex: 8
+      cellRect:
+        x: 1
+        y: 9
+        width: 59
+        height: 26
+      spriteId: a3f5389e91708b142a1a635b29304158
+    - name: Spoder gets stomped_Frame_9
+      frameIndex: 9
+      cellRect:
+        x: 1
+        y: 9
+        width: 59
+        height: 24
+      spriteId: 1418324f482f06f4285899a94d4b8757
+    - name: Spoder gets stomped_Frame_10
+      frameIndex: 10
+      cellRect:
+        x: 1
+        y: 9
+        width: 59
+        height: 23
+      spriteId: d7b96a99ee8eff142b970fd12240d6b6
+    linkedCells: []
+    parentIndex: -1
+  platformSettings: []
+  secondarySpriteTextures: []
+  spritePackingTag: 
+  canvasSize: {x: 64, y: 64}
