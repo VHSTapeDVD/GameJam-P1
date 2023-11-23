@@ -26,10 +26,13 @@ public class PlayerHealth : MonoBehaviour
         GameManager.Instance.health = health;
     }
 
-    public void TakeDamage(int damage)
+    public void TakeDamage(float damage)
     {
-        health -= damage;
 
+        int roundedDamage = Mathf.RoundToInt(damage);
+
+        health -= roundedDamage;
+        
         switch (health)
         {
             case 3:

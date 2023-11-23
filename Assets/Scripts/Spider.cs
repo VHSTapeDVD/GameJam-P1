@@ -16,7 +16,7 @@ public class GoombaScript : MonoBehaviour
         {
             isFlattened = true;
             GetComponent<Collider2D>().enabled = false;
-            GetComponent<Spider1_movement>().enabled = false;
+            GetComponent<Spider1_movement>().enabled = false; // Change this to the appropriate script name
             GetComponent<SpriteRenderer>().sprite = flatsprite;
             Destroy(gameObject, 5f);
         }
@@ -24,7 +24,7 @@ public class GoombaScript : MonoBehaviour
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
-        if (collision.gameObject.CompareTag("player"))
+        if (collision.gameObject.CompareTag("Player")) // Change "player" to "Player" to match the tag
         {
             if (collision.contactCount > 0)
             {
@@ -39,7 +39,7 @@ public class GoombaScript : MonoBehaviour
                 else if (Mathf.Abs(collisionNormal.x) > 0.8f)
                 {
                     // Side collision - Player takes damage (you need to implement this)
-                    Health playerHealth = collision.gameObject.GetComponent<Health>();
+                    PlayerHealth playerHealth = collision.gameObject.GetComponent<PlayerHealth>();
                     if (playerHealth != null)
                     {
                         playerHealth.TakeDamage(1f); // Pass the appropriate damage amount

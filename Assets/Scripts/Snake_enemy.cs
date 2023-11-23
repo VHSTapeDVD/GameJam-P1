@@ -6,7 +6,7 @@ public class Snake : MonoBehaviour
     {
         if (other.CompareTag("Player"))
         {
-            Health health = other.GetComponent<Health>();
+            PlayerHealth health = other.GetComponent<PlayerHealth> ();
 
             if (health != null)
             {

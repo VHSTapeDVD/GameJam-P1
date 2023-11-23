@@ -7,7 +7,7 @@ public class Spider_Enemy : MonoBehaviour
     [SerializeField] private float speed;
     [SerializeField] private float damage;
     [SerializeField] private float knockoutForce = 10f;
-    private bool movingleft;
+    private bool movingLeft;
     private float leftEdge;
     private float rightEdge;
 
@@ -19,14 +19,19 @@ public class Spider_Enemy : MonoBehaviour
 
     private void Update()
     {
-        if (movingleft)
+        Move();
+    }
+
+    private void Move()
+    {
+        if (movingLeft)
         {
             if (transform.position.x > leftEdge)
             {
                 transform.position = new Vector3(transform.position.x - speed * Time.deltaTime, transform.position.y, transform.position.z);
             }
             else
-                movingleft = false;
+                movingLeft = false;
         }
         else
         {
@@ -35,26 +40,19 @@ public class Spider_Enemy : MonoBehaviour
                 transform.position = new Vector3(transform.position.x + speed * Time.deltaTime, transform.position.y, transform.position.z);
             }
             else
-                movingleft = true;
+                movingLeft = true;
         }
     }
 
     public void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.tag == "player")
+        if (collision.CompareTag("Player"))
         {
-            Health playerHealth = collision.GetComponent<Health>();
-
+            PlayerHealth playerHealth = collision.GetComponent<PlayerHealth>();
 
             if (IsPlayerAboveSpider(collision.transform.position.y))
             {
-
-                Rigidbody2D spiderRigidbody = GetComponent<Rigidbody2D>();
-                spiderRigidbody.velocity = new Vector2(0f, knockoutForce);
-                GetComponent<Collider2D>().enabled = false;
-                StartCoroutine(DisableSpiderAfterTime(2f));
-
-         
+                KnockoutSpider();
             }
             else
             {
@@ -65,8 +63,15 @@ public class Spider_Enemy : MonoBehaviour
 
     private bool IsPlayerAboveSpider(float playerY)
     {
-
         return playerY > transform.position.y + 0.5f;
+    }
+
+    private void KnockoutSpider()
+    {
+        Rigidbody2D spiderRigidbody = GetComponent<Rigidbody2D>();
+        spiderRigidbody.velocity = new Vector2(0f, knockoutForce);
+        GetComponent<Collider2D>().enabled = false;
+        StartCoroutine(DisableSpiderAfterTime(2f));
     }
 
     private IEnumerator DisableSpiderAfterTime(float time)
