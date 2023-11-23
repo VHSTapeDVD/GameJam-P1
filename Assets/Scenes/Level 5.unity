@@ -707,7 +707,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 758b817ecc7554f41b2f6cef605aa5a3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  sceneName: Level 5
+  sceneName: Level 6
 --- !u!70 &749179376
 CapsuleCollider2D:
   m_ObjectHideFlags: 0
@@ -4251,7 +4251,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7878350319992209165, guid: a4cb19876758ca343bacadc809b61775, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -2.85
+      value: -4.02
       objectReference: {fileID: 0}
     - target: {fileID: 7878350319992209165, guid: a4cb19876758ca343bacadc809b61775, type: 3}
       propertyPath: m_LocalPosition.z
