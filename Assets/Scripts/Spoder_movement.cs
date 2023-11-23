@@ -29,7 +29,7 @@ public class Spoder_movement : MonoBehaviour
         Vector2 targetVelocity = new Vector2(horizontalMovement * speed, rigidbody.velocity.y);
         rigidbody.velocity = targetVelocity;
 
-        // Check if the Snake is at the edge of the platform
+        // Check if the Spoder should flip
         if (ShouldFlip())
         {
             Flip();
@@ -39,8 +39,22 @@ public class Spoder_movement : MonoBehaviour
     bool ShouldFlip()
     {
         float raycastDistance = 0.2f; // Adjust this value based on your platform's scale
-        Vector2 raycastOrigin = isFacingRight ? transform.position + Vector3.right * (platformWidth / 2) : transform.position - Vector3.right * (platformWidth / 2);
+        float raycastDirection = isFacingRight ? 1f : -1f;
+        Vector2 raycastOrigin = transform.position + Vector3.right * (raycastDirection * platformWidth / 2);
+
         RaycastHit2D hit = Physics2D.Raycast(raycastOrigin, Vector2.down, raycastDistance);
+
+        // Check if the object it hits is tagged as "Flag"
+        if (hit.collider != null && hit.collider.CompareTag("Flag"))
+        {
+            return false; // Don't flip if it's a "Flag"
+        }
+
+        // Check if the object it hits is tagged as "Untagged" or any other tag you want to treat the same
+        if (hit.collider != null && hit.collider.CompareTag("Untagged"))
+        {
+            return true; // Flip if it's "Untagged"
+        }
 
         return hit.collider == null;
     }
@@ -53,4 +67,3 @@ public class Spoder_movement : MonoBehaviour
         transform.localScale = scale;
     }
 }
-
