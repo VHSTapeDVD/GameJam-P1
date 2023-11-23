@@ -1,18 +1,17 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class Spiderweb : MonoBehaviour
 {
-    private float bounce = 20f;
-
+    public float bounceForce = 20f;
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
-        collision.gameObject.GetComponent<Rigidbody2D>().AddForce(Vector2.up * bounce, ForceMode2D.Impulse);
+        Rigidbody2D otherRigidbody = collision.gameObject.GetComponent<Rigidbody2D>();
+
+        if (otherRigidbody != null)
+        {
+            // Apply a vertical impulse force to the collided object
+            otherRigidbody.AddForce(Vector2.up * bounceForce, ForceMode2D.Impulse);
+        }
     }
-
-
-
-
 }
