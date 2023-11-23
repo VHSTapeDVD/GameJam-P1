@@ -3,10 +3,9 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-public class EndScreen : MonoBehaviour
+public class GameOver : MonoBehaviour
 {
-
-    public void PlayAgain()
+    public void TryAgain()
     {
         SceneManager.LoadScene("Level 1");
     }
