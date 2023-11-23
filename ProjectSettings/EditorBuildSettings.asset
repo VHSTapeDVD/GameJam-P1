@@ -20,13 +20,16 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/GameCompleted.unity
     guid: 3437e6af20569426ca2c5b3d32fa0af4
-  - enabled: 1
-    path: Assets/Scenes/GameOver.unity
-    guid: fb4e21420c9d44363872cd3f9daa7eba
-  - enabled: 1
+  - enabled: 0
     path: "Assets/Scenes/Healthbar (bruges ikke t\xF8r bare ikke slette).unity"
     guid: e40d9bb540b5748529c9b4d822062c4e
   - enabled: 1
     path: Assets/Scenes/Level 3.unity
     guid: 06c12f445924e884394c5e1738647d20
+  - enabled: 1
+    path: Assets/Scenes/GameOver.unity
+    guid: fb4e21420c9d44363872cd3f9daa7eba
+  - enabled: 1
+    path: Assets/Scenes/Level 7.unity
+    guid: 17e5de430ab8c45fe9411f7254399676
   m_configObjects: {}
