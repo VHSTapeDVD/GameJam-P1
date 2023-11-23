@@ -607,7 +607,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6b3d1e96abad7d546b538110b67c77c4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  bounceForce: 30
+  bounceForce: 20
 --- !u!66 &678320629
 CompositeCollider2D:
   m_ObjectHideFlags: 0
