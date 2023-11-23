@@ -24,8 +24,9 @@ public class PlayerMovement : MonoBehaviour
         if (Input.GetButtonDown("Jump") && isGrounded)
         {
             rb.AddForce(Vector2.up * jumpForce, ForceMode2D.Impulse);
-            isGrounded = false;
+            // isGrounded = false; // Remove or comment out this line
         }
+
 
         Flip(horizontalInput);
     }

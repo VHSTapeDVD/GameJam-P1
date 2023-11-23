@@ -2025,7 +2025,7 @@ Rigidbody2D:
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
   m_Mass: 1
-  m_LinearDrag: 0
+  m_LinearDrag: 1
   m_AngularDrag: 0
   m_GravityScale: 5
   m_Material: {fileID: 0}
@@ -2074,7 +2074,7 @@ CapsuleCollider2D:
   m_Offset: {x: -0.050000004, y: 0.265}
   m_Size: {x: 0.52, y: 0.51}
   m_Direction: 0
---- !u!114 &846674154
+--- !u!114 &846674151
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -2086,7 +2086,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 59671333abc897641ae4657be57b4761, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 5
+  speed: 7
   jumpForce: 14
 --- !u!1 &890371009
 GameObject:
@@ -2816,6 +2816,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6b3d1e96abad7d546b538110b67c77c4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  bounceForce: 30
 --- !u!1 &1972054257
 GameObject:
   m_ObjectHideFlags: 0
@@ -3571,7 +3572,7 @@ PrefabInstance:
       addedObject: {fileID: 846674149}
     - targetCorrespondingSourceObject: {fileID: -2253911629886400664, guid: a4cb19876758ca343bacadc809b61775, type: 3}
       insertIndex: -1
-      addedObject: {fileID: 846674154}
+      addedObject: {fileID: 846674151}
   m_SourcePrefab: {fileID: -8435245712485981826, guid: a4cb19876758ca343bacadc809b61775, type: 3}
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
