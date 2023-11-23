@@ -3,9 +3,13 @@
 --- !u!78 &1
 TagManager:
   serializedVersion: 2
+<<<<<<< HEAD
   tags:
   - Ground
   - Flag
+=======
+  tags: []
+>>>>>>> parent of e9a7c19 (Merge branch 'main' of https://github.com/VHSTapeDVD/GameJam-P1)
   layers:
   - Default
   - TransparentFX
