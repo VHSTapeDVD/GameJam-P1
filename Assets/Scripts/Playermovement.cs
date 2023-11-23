@@ -2,8 +2,8 @@ using UnityEngine;
 
 public class PlayerMovement : MonoBehaviour
 {
-    public float speed = 5f;
-    public float jumpForce = 10f;
+    public float speed = 7f;
+    public float jumpForce = 14f;
     private bool isFacingRight = true;
     private Rigidbody2D rb;
     private bool isGrounded;
@@ -24,8 +24,9 @@ public class PlayerMovement : MonoBehaviour
         if (Input.GetButtonDown("Jump") && isGrounded)
         {
             rb.AddForce(Vector2.up * jumpForce, ForceMode2D.Impulse);
-            // isGrounded = false; // Remove or comment out this line
+            isGrounded = false; // Uncomment or add this line
         }
+
 
 
         Flip(horizontalInput);
