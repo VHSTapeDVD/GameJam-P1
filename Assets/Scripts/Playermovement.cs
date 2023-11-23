@@ -4,7 +4,7 @@ public class PlayerMovement : MonoBehaviour
 {
     public float speed = 5f;
     public float jumpForce = 10f;
-
+    private bool isFacingRight = true;
     private Rigidbody2D rb;
     private bool isGrounded;
 
@@ -26,6 +26,8 @@ public class PlayerMovement : MonoBehaviour
             rb.AddForce(Vector2.up * jumpForce, ForceMode2D.Impulse);
             isGrounded = false;
         }
+
+        Flip(horizontalInput);
     }
 
     void OnCollisionEnter2D(Collision2D collision)
@@ -34,6 +36,20 @@ public class PlayerMovement : MonoBehaviour
         if (collision.gameObject.CompareTag("Ground"))
         {
             isGrounded = true;
+        }
+    }
+
+    private void Flip(float horizontalInput)
+    {
+        // Check if the direction has changed
+        if ((horizontalInput > 0 && !isFacingRight) || (horizontalInput < 0 && isFacingRight))
+        {
+            isFacingRight = !isFacingRight;
+
+            // Flip the player's sprite
+            Vector3 localScale = transform.localScale;
+            localScale.x *= -1f;
+            transform.localScale = localScale;
         }
     }
 }

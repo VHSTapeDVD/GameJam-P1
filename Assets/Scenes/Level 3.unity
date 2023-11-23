@@ -2012,23 +2012,6 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: -2253911629886400664, guid: a4cb19876758ca343bacadc809b61775, type: 3}
   m_PrefabInstance: {fileID: 2060998568}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &846674148
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 846674147}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a8807e493e697094485cec145a4fef82, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  rb: {fileID: 846674149}
-  groundCheck: {fileID: 846674153}
-  groundLayer:
-    serializedVersion: 2
-    m_Bits: 64
 --- !u!50 &846674149
 Rigidbody2D:
   serializedVersion: 4
@@ -2091,11 +2074,20 @@ CapsuleCollider2D:
   m_Offset: {x: -0.050000004, y: 0.265}
   m_Size: {x: 0.52, y: 0.51}
   m_Direction: 0
---- !u!4 &846674153 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 7878350319992209165, guid: a4cb19876758ca343bacadc809b61775, type: 3}
-  m_PrefabInstance: {fileID: 2060998568}
+--- !u!114 &846674154
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 846674147}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0001d57b296b7a24fbf99e7a92a43718, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  speed: 5
+  jumpForce: 10
 --- !u!1 &890371009
 GameObject:
   m_ObjectHideFlags: 0
@@ -2504,6 +2496,7 @@ GameObject:
   - component: {fileID: 1908337640}
   - component: {fileID: 1908337639}
   - component: {fileID: 1908337638}
+  - component: {fileID: 1908337642}
   m_Layer: 0
   m_Name: Cobweb
   m_TagString: Untagged
@@ -2593,23 +2586,8 @@ Tilemap:
       m_TileColorIndex: 0
       m_TileObjectToInstantiateIndex: 65535
       dummyAlignment: 0
-      m_AllTileFlags: 0
-  m_AnimatedTiles:
-  - first: {x: 1, y: -4, z: 0}
-    second:
-      serializedVersion: 2
-      m_AnimatedSprites:
-      - {fileID: 266379837, guid: 6ba18a2212b9947628de5962b6f6dfe3, type: 3}
-      - {fileID: -1475769535, guid: 6ba18a2212b9947628de5962b6f6dfe3, type: 3}
-      - {fileID: -1619986669, guid: 6ba18a2212b9947628de5962b6f6dfe3, type: 3}
-      - {fileID: 1800795015, guid: 6ba18a2212b9947628de5962b6f6dfe3, type: 3}
-      - {fileID: -326679313, guid: 6ba18a2212b9947628de5962b6f6dfe3, type: 3}
-      - {fileID: 808043261, guid: 6ba18a2212b9947628de5962b6f6dfe3, type: 3}
-      - {fileID: 248816517, guid: 6ba18a2212b9947628de5962b6f6dfe3, type: 3}
-      - {fileID: 1617381515, guid: 6ba18a2212b9947628de5962b6f6dfe3, type: 3}
-      m_AnimationSpeed: 8
-      m_AnimationTimeOffset: 0
-      m_Flags: 0
+      m_AllTileFlags: 1073741825
+  m_AnimatedTiles: {}
   m_TileAssetArray:
   - m_RefCount: 0
     m_Data: {fileID: 0}
@@ -2620,7 +2598,7 @@ Tilemap:
   - m_RefCount: 0
     m_Data: {fileID: 0}
   - m_RefCount: 1
-    m_Data: {fileID: 11400000, guid: 2e545116c56094114b3245e4c7b6afc0, type: 2}
+    m_Data: {fileID: 11400000, guid: d0351c7fb40a14197b1bd6abc8591303, type: 2}
   m_TileSpriteArray:
   - m_RefCount: 0
     m_Data: {fileID: 0}
@@ -2631,7 +2609,7 @@ Tilemap:
   - m_RefCount: 0
     m_Data: {fileID: 0}
   - m_RefCount: 1
-    m_Data: {fileID: 1617381515, guid: 6ba18a2212b9947628de5962b6f6dfe3, type: 3}
+    m_Data: {fileID: 266379837, guid: 6ba18a2212b9947628de5962b6f6dfe3, type: 3}
   m_TileMatrixArray:
   - m_RefCount: 1
     m_Data:
@@ -2716,9 +2694,30 @@ CompositeCollider2D:
   m_EdgeRadius: 0
   m_ColliderPaths:
   - m_Collider: {fileID: 1908337640}
-    m_ColliderPaths: []
+    m_ColliderPaths:
+    - - X: 30000000
+        Y: -29375000
+      - X: 22187500
+        Y: -29375000
+      - X: 17500000
+        Y: -30000000
+      - X: 16875000
+        Y: -29375000
+      - X: 10000000
+        Y: -29375000
+      - X: 10000000
+        Y: -40000000
+      - X: 30000000
+        Y: -40000000
   m_CompositePaths:
-    m_Paths: []
+    m_Paths:
+    - - {x: 2.999971, y: -4}
+      - {x: 2.999971, y: -2.9375}
+      - {x: 2.218748, y: -2.9375002}
+      - {x: 1.7499908, y: -2.999991}
+      - {x: 1.6874893, y: -2.9375}
+      - {x: 1, y: -2.9375293}
+      - {x: 1.0000293, y: -4}
   m_VertexDistance: 0.0005
   m_OffsetDistance: 0.00005
   m_UseDelaunayMesh: 0
@@ -2805,6 +2804,18 @@ PlatformEffector2D:
   m_UseSideFriction: 0
   m_UseSideBounce: 0
   m_SideArc: 1
+--- !u!114 &1908337642
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1908337634}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6b3d1e96abad7d546b538110b67c77c4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1972054257
 GameObject:
   m_ObjectHideFlags: 0
@@ -3556,7 +3567,7 @@ PrefabInstance:
       addedObject: {fileID: 846674149}
     - targetCorrespondingSourceObject: {fileID: -2253911629886400664, guid: a4cb19876758ca343bacadc809b61775, type: 3}
       insertIndex: -1
-      addedObject: {fileID: 846674148}
+      addedObject: {fileID: 846674154}
   m_SourcePrefab: {fileID: -8435245712485981826, guid: a4cb19876758ca343bacadc809b61775, type: 3}
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
