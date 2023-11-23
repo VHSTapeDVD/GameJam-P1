@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class Spiderweb : MonoBehaviour
 {
-    private float bounce = 20f;
+    public float bounce = 20f;
 
 
     private void OnCollisionEnter2D(Collision2D collision)
