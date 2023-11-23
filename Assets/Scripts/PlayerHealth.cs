@@ -1,13 +1,14 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class PlayerHealth : MonoBehaviour
 {
     public int maxhealth = 10;
     public int health;
 
-    public GameObject KangeeHead1, KangeeHead2, KangeeHead3, gameOver;
+    public GameObject KangeeHead1, KangeeHead2, KangeeHead3;
 
     // Start is called before the first frame update
     void Awake()
@@ -18,7 +19,6 @@ public class PlayerHealth : MonoBehaviour
         KangeeHead1.gameObject.SetActive(true);
         KangeeHead2.gameObject.SetActive(true);
         KangeeHead3.gameObject.SetActive(true);
-        gameOver.gameObject.SetActive(false);
     }
 
     private void Update()
@@ -55,11 +55,9 @@ public class PlayerHealth : MonoBehaviour
                 break;
 
             case 0:
-                Debug.Log("Det her er lort");
                 KangeeHead1.gameObject.SetActive(false);
                 KangeeHead2.gameObject.SetActive(false);
                 KangeeHead3.gameObject.SetActive(false);
-                gameOver.gameObject.SetActive(true);
                 Time.timeScale = 0;
                 break;
         }
@@ -67,6 +65,11 @@ public class PlayerHealth : MonoBehaviour
         if (health <= 0)
         {
             Destroy(gameObject);
+        }
+
+        if (health == 0)
+        {
+            SceneManager.LoadScene("GamOver");
         }
     }
 }
