@@ -8,7 +8,7 @@ public class PlayerMovement : MonoBehaviour
     private Rigidbody2D rb;
     private bool isGrounded;
 
-    void Awake()
+    void Start()
     {
         rb = GetComponent<Rigidbody2D>();
         rb.freezeRotation = true; // Freeze rotation along all axes
