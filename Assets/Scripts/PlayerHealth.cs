@@ -1,11 +1,13 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class PlayerHealth : MonoBehaviour
 {
     public int maxhealth = 10;
     public int health;
+    public Image healthbar;
 
     public GameObject KangeeHead1, KangeeHead2, KangeeHead3, gameOver;
 
