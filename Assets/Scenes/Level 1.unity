@@ -2070,7 +2070,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7878350319992209165, guid: a4cb19876758ca343bacadc809b61775, type: 3}
       propertyPath: m_LocalScale.x
-      value: 2
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 7878350319992209165, guid: a4cb19876758ca343bacadc809b61775, type: 3}
       propertyPath: m_LocalScale.y
@@ -2177,7 +2177,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 5
-  jumpForce: 14
+  jumpForce: 17
 --- !u!50 &1531650344
 Rigidbody2D:
   serializedVersion: 4
@@ -2238,7 +2238,7 @@ CapsuleCollider2D:
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: -0.050000004, y: 0.265}
-  m_Size: {x: 0.52, y: 0.51}
+  m_Size: {x: 0.26, y: 0.4}
   m_Direction: 0
 --- !u!1 &1555806000
 GameObject:
