@@ -11,7 +11,7 @@ public class SceneChanger : MonoBehaviour
     private void OntriggerEnter(Collider other)
     {
 
-        if (other.CompareTag(Flag))
+        if (other.CompareTag("Flag"))
         {
             SceneManager.LoadScene(sceneName);
 
