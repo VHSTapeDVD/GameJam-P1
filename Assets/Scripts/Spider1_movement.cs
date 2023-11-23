@@ -20,7 +20,7 @@ public class Spider1_movement : MonoBehaviour
 
     private void FixedUpdate()
     {
-        // Check if the Spider is at the edge of the platform
+        // Check if the Spider is at the edge of the platform or not grounded
         if (ShouldFlip())
         {
             Flip();
