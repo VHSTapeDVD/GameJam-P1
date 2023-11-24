@@ -56,7 +56,11 @@ public class Spoder_movement : MonoBehaviour
             return true; // Flip if it's "Untagged" or "Spoder"
         }
 
-        return hit.collider == null;
+        // Check if there's an obstacle in front
+        Vector2 obstacleCheckOrigin = transform.position + Vector3.right * (raycastDirection * platformWidth / 2 + raycastDirection * 0.2f);
+        RaycastHit2D obstacleHit = Physics2D.Raycast(obstacleCheckOrigin, new Vector2(raycastDirection, 0), raycastDistance);
+
+        return obstacleHit.collider != null;
     }
 
     void Flip()
