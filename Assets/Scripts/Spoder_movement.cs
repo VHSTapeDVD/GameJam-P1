@@ -50,10 +50,10 @@ public class Spoder_movement : MonoBehaviour
             return false; // Don't flip if it's a "Flag"
         }
 
-        // Check if the object it hits is tagged as "Untagged" or any other tag you want to treat the same
-        if (hit.collider != null && hit.collider.CompareTag("Untagged"))
+        // Check if the object it hits is tagged as "Untagged" or "Spoder"
+        if (hit.collider != null && (hit.collider.CompareTag("Untagged") || hit.collider.CompareTag("Spoder")))
         {
-            return true; // Flip if it's "Untagged"
+            return true; // Flip if it's "Untagged" or "Spoder"
         }
 
         return hit.collider == null;
