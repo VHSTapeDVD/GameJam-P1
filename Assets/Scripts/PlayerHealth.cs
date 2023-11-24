@@ -58,7 +58,7 @@ public class PlayerHealth : MonoBehaviour
                 KangeeHead1.gameObject.SetActive(false);
                 KangeeHead2.gameObject.SetActive(false);
                 KangeeHead3.gameObject.SetActive(false);
-                Time.timeScale = 0;
+                Time.timeScale = 1.0f;
                 break;
         }
 
