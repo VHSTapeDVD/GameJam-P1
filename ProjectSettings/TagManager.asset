@@ -9,6 +9,7 @@ TagManager:
   - Snake
   - Flag
   - Cactus
+  - Speder
   layers:
   - Default
   - TransparentFX
