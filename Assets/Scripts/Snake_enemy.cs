@@ -26,21 +26,15 @@ public class Snake_movement : MonoBehaviour
         float horizontalMovement = isFacingRight ? 1 : -1;
         Vector2 targetVelocity = new Vector2(horizontalMovement * speed, rigidbody.velocity.y);
         rigidbody.velocity = targetVelocity;
-
-        // Check if the Snake is at the edge of the platform
-        if (ShouldFlip())
-        {
-            Flip();
-        }
     }
 
-    bool ShouldFlip()
+    void OnTriggerEnter2D(Collider2D other)
     {
-        float raycastDistance = 0.2f; // Adjust this value based on your platform's scale
-        Vector2 raycastOrigin = isFacingRight ? transform.position + Vector3.right * (platformWidth / 2) : transform.position - Vector3.right * (platformWidth / 2);
-        RaycastHit2D hit = Physics2D.Raycast(raycastOrigin, Vector2.down, raycastDistance);
-
-        return hit.collider == null;
+        if (other.tag == "Cactus" || other.tag == "Flag")
+        {
+            Flip();
+            Debug.Log("Collided with " + other.tag);
+        }
     }
 
     void Flip()
