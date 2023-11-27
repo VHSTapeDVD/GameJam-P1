@@ -26,7 +26,7 @@ public class PlayerHealth : MonoBehaviour
             Destroy(gameObject);
         }
 
-        if (health == 0)
+        if (health <= 0)
         {
             SceneManager.LoadScene("GameOver");
         }
