@@ -3,7 +3,12 @@
 --- !u!78 &1
 TagManager:
   serializedVersion: 2
-  tags: []
+  tags:
+  - Flag
+  - Ground
+  - Cactus
+  - Spider
+  - speder
   layers:
   - Default
   - TransparentFX
