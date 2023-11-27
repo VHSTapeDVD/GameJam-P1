@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: d14d5af0cd5dee847bb74bbbb6168b9f
+guid: fe275a8aa3df8e54a96cad98b71eec53
 ScriptedImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -119,7 +119,7 @@ ScriptedImporter:
     tessellationDetail: 0
     uvTransform: {x: 0, y: 0}
   animatedSpriteImportData:
-  - name: Kangee_Frame_0
+  - name: Kangee_jump_Frame_0
     originalName: 
     pivot: {x: 0.53846157, y: -0.040816326}
     alignment: 9
@@ -130,7 +130,7 @@ ScriptedImporter:
       y: 183
       width: 52
       height: 49
-    spriteID: 66ee94db996d4e745954fd8a0b5ed60d
+    spriteID: 871029fbde9c84c138dbf9cc684c8f92
     spriteBone: []
     spriteOutline: []
     vertices: []
@@ -139,7 +139,7 @@ ScriptedImporter:
     edges: []
     tessellationDetail: 0
     uvTransform: {x: 4, y: 183}
-  - name: Kangee_Frame_1
+  - name: Kangee_jump_Frame_1
     originalName: 
     pivot: {x: 0.53846157, y: -0.019607844}
     alignment: 9
@@ -150,7 +150,7 @@ ScriptedImporter:
       y: 65
       width: 52
       height: 51
-    spriteID: 2d7235ac11876f841a0756c259b0ce24
+    spriteID: f3c5efcc3154f48ba858eef4a4110680
     spriteBone: []
     spriteOutline: []
     vertices: []
@@ -159,7 +159,7 @@ ScriptedImporter:
     edges: []
     tessellationDetail: 0
     uvTransform: {x: 4, y: 65}
-  - name: Kangee_Frame_2
+  - name: Kangee_jump_Frame_2
     originalName: 
     pivot: {x: 0.5471698, y: -0.018867925}
     alignment: 9
@@ -170,7 +170,7 @@ ScriptedImporter:
       y: 4
       width: 53
       height: 53
-    spriteID: 878f914c247bdfa4fa480ee62b6e07bb
+    spriteID: 32e8f799517f9425d80751d069f2d7a4
     spriteBone: []
     spriteOutline: []
     vertices: []
@@ -179,7 +179,7 @@ ScriptedImporter:
     edges: []
     tessellationDetail: 0
     uvTransform: {x: 4, y: 4}
-  - name: Kangee_Frame_3
+  - name: Kangee_jump_Frame_3
     originalName: 
     pivot: {x: 0.53846157, y: -0.019607844}
     alignment: 9
@@ -190,7 +190,7 @@ ScriptedImporter:
       y: 124
       width: 52
       height: 51
-    spriteID: 8f80996c2e57ce44bbc234c994b6dc22
+    spriteID: f34bc964bf7d14831b0a05a2a0824f66
     spriteBone: []
     spriteOutline: []
     vertices: []
@@ -199,7 +199,7 @@ ScriptedImporter:
     edges: []
     tessellationDetail: 0
     uvTransform: {x: 4, y: 124}
-  - name: Kangee_Frame_4
+  - name: Kangee_jump_Frame_4
     originalName: 
     pivot: {x: 0.53846157, y: -0.040816326}
     alignment: 9
@@ -210,7 +210,7 @@ ScriptedImporter:
       y: 4
       width: 52
       height: 49
-    spriteID: 8fdba819268783c4f99736543baaad31
+    spriteID: eeb71956641a5406b9a2e74042189531
     spriteBone: []
     spriteOutline: []
     vertices: []
@@ -219,7 +219,7 @@ ScriptedImporter:
     edges: []
     tessellationDetail: 0
     uvTransform: {x: 65, y: 4}
-  - name: Kangee_Frame_5
+  - name: Kangee_jump_Frame_5
     originalName: 
     pivot: {x: 0.53846157, y: -0.08510638}
     alignment: 9
@@ -230,7 +230,7 @@ ScriptedImporter:
       y: 61
       width: 52
       height: 47
-    spriteID: 7e68053a3b94b3246984e91106a25e5c
+    spriteID: 1baf9e35604ff4ecfb8827afb903f44c
     spriteBone: []
     spriteOutline: []
     vertices: []
@@ -242,60 +242,60 @@ ScriptedImporter:
   spriteSheetImportData: []
   asepriteLayers:
   - layerIndex: 0
-    guid: 188486535
-    name: Kangee
+    guid: -1365294412
+    name: Kangee_jump
     layerFlags: 0
     layerType: 0
     blendMode: 0
     cells:
-    - name: Kangee_Frame_0
+    - name: Kangee_jump_Frame_0
       frameIndex: 0
       cellRect:
         x: 4
         y: 2
         width: 52
         height: 49
-      spriteId: 66ee94db996d4e745954fd8a0b5ed60d
-    - name: Kangee_Frame_1
+      spriteId: 871029fbde9c84c138dbf9cc684c8f92
+    - name: Kangee_jump_Frame_1
       frameIndex: 1
       cellRect:
         x: 4
         y: 1
         width: 52
         height: 51
-      spriteId: 2d7235ac11876f841a0756c259b0ce24
-    - name: Kangee_Frame_2
+      spriteId: f3c5efcc3154f48ba858eef4a4110680
+    - name: Kangee_jump_Frame_2
       frameIndex: 2
       cellRect:
         x: 3
         y: 1
         width: 53
         height: 53
-      spriteId: 878f914c247bdfa4fa480ee62b6e07bb
-    - name: Kangee_Frame_3
+      spriteId: 32e8f799517f9425d80751d069f2d7a4
+    - name: Kangee_jump_Frame_3
       frameIndex: 3
       cellRect:
         x: 4
         y: 1
         width: 52
         height: 51
-      spriteId: 8f80996c2e57ce44bbc234c994b6dc22
-    - name: Kangee_Frame_4
+      spriteId: f34bc964bf7d14831b0a05a2a0824f66
+    - name: Kangee_jump_Frame_4
       frameIndex: 4
       cellRect:
         x: 4
         y: 2
         width: 52
         height: 49
-      spriteId: 8fdba819268783c4f99736543baaad31
-    - name: Kangee_Frame_5
+      spriteId: eeb71956641a5406b9a2e74042189531
+    - name: Kangee_jump_Frame_5
       frameIndex: 5
       cellRect:
         x: 4
         y: 4
         width: 52
         height: 47
-      spriteId: 7e68053a3b94b3246984e91106a25e5c
+      spriteId: 1baf9e35604ff4ecfb8827afb903f44c
     linkedCells: []
     parentIndex: -1
   platformSettings: []
