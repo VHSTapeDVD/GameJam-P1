@@ -2,15 +2,12 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Simple_Movement : MonoBehaviour
+public class Spoder_movement : MonoBehaviour
 {
     public float speed = 1f;
     private new Rigidbody2D rigidbody;
     private bool isFacingRight = true;
     private float platformWidth;
-
-    // Layer mask to exclude the player's layer
-    public LayerMask obstacleLayerMask;
 
     void Start()
     {
@@ -18,7 +15,7 @@ public class Simple_Movement : MonoBehaviour
         rigidbody.gravityScale = 0; // Disable gravity to prevent falling
 
         // Replace the value below with the actual x-scale of your platform
-        platformWidth = 4.0f;
+        platformWidth = 3f;
     }
 
     void FixedUpdate()
@@ -28,7 +25,7 @@ public class Simple_Movement : MonoBehaviour
 
     void Move()
     {
-        float horizontalMovement = isFacingRight ? 2 : -2;
+        float horizontalMovement = isFacingRight ? 1 : -1;
         Vector2 targetVelocity = new Vector2(horizontalMovement * speed, rigidbody.velocity.y);
         rigidbody.velocity = targetVelocity;
 
@@ -41,12 +38,11 @@ public class Simple_Movement : MonoBehaviour
 
     bool ShouldFlip()
     {
-        float raycastDistance = 0.3f; // Adjust this value based on your platform's scale
-        float raycastDirection = isFacingRight ? 2f : -2f;
-        Vector2 raycastOrigin = transform.position + Vector3.right * (raycastDirection * platformWidth / 4);
+        float raycastDistance = 0.4f; // Adjust this value based on your platform's scale
+        float raycastDirection = isFacingRight ? 1f : -1f;
+        Vector2 raycastOrigin = transform.position + Vector3.right * (raycastDirection * platformWidth / 2);
 
-        // Use LayerMask to exclude the player's layer
-        RaycastHit2D hit = Physics2D.Raycast(raycastOrigin, Vector2.down, raycastDistance, ~obstacleLayerMask);
+        RaycastHit2D hit = Physics2D.Raycast(raycastOrigin, Vector2.down, raycastDistance);
 
         // Check if the object it hits is tagged as "Flag"
         if (hit.collider != null && hit.collider.CompareTag("Flag"))
@@ -55,14 +51,14 @@ public class Simple_Movement : MonoBehaviour
         }
 
         // Check if the object it hits is tagged as "Untagged" or "Spoder"
-        if (hit.collider != null && (hit.collider.CompareTag("Untagged") || hit.collider.CompareTag("Spider")))
+        if (hit.collider != null && (hit.collider.CompareTag("Untagged") || hit.collider.CompareTag("Spoder")))
         {
             return true; // Flip if it's "Untagged" or "Spoder"
         }
 
         // Check if there's an obstacle in front
-        Vector2 obstacleCheckOrigin = transform.position + Vector3.right * (raycastDirection * platformWidth / 4 + raycastDirection * 0.4f);
-        RaycastHit2D obstacleHit = Physics2D.Raycast(obstacleCheckOrigin, new Vector2(raycastDirection, 0), raycastDistance, ~obstacleLayerMask);
+        Vector2 obstacleCheckOrigin = transform.position + Vector3.right * (raycastDirection * platformWidth / 2 + raycastDirection * 0.2f);
+        RaycastHit2D obstacleHit = Physics2D.Raycast(obstacleCheckOrigin, new Vector2(raycastDirection, 0), raycastDistance);
 
         return obstacleHit.collider != null;
     }
