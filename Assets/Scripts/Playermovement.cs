@@ -22,12 +22,17 @@ public class PlayerMovement : MonoBehaviour
         // Player movement
         float horizontalInput = Input.GetAxis("Horizontal");
         rb.velocity = new Vector2(horizontalInput * speed, rb.velocity.y);
-
+        if (rb.velocity.x != 0 && isGrounded)
+        {
+            myAnimator.SetBool("isWalking", true);
+        }
+        else
+            myAnimator.SetBool("isWalking", false);
 
         // Jumping
         if (Input.GetButtonDown("Jump") && isGrounded)
         {
-            //myAnimator.SetBool("isJumping", true);
+            myAnimator.SetBool("isJumping", true);
             rb.AddForce(Vector2.up * jumpForce, ForceMode2D.Impulse);
             isGrounded = false; // Uncomment or add this line
         }
@@ -42,6 +47,7 @@ public class PlayerMovement : MonoBehaviour
         if (collision.gameObject.CompareTag("Ground"))
         {
             isGrounded = true;
+            myAnimator.SetBool("isJumping", false);
         }
     }
 
