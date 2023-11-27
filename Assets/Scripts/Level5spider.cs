@@ -8,13 +8,13 @@ public class Spoder_movement : MonoBehaviour
     private new Rigidbody2D rigidbody;
     private bool isFacingRight = true;
     private float platformWidth;
+    public LayerMask obstacleLayerMask; // Add a public LayerMask variable
 
     void Start()
     {
         rigidbody = GetComponent<Rigidbody2D>();
-        rigidbody.gravityScale = 0; // Disable gravity to prevent falling
+        rigidbody.gravityScale = 0;
 
-        // Replace the value below with the actual x-scale of your platform
         platformWidth = 3f;
     }
 
@@ -25,7 +25,7 @@ public class Spoder_movement : MonoBehaviour
 
     void Move()
     {
-        float horizontalMovement = isFacingRight ? 1 : -1;
+        float horizontalMovement = isFacingRight ? 3 : -3; // Adjusted for more movement
         Vector2 targetVelocity = new Vector2(horizontalMovement * speed, rigidbody.velocity.y);
         rigidbody.velocity = targetVelocity;
 
