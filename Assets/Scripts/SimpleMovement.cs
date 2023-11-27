@@ -9,13 +9,16 @@ public class Simple_Movement : MonoBehaviour
     private bool isFacingRight = true;
     private float platformWidth;
 
+    // Layer mask to exclude the player's layer
+    public LayerMask obstacleLayerMask;
+
     void Start()
     {
         rigidbody = GetComponent<Rigidbody2D>();
         rigidbody.gravityScale = 0; // Disable gravity to prevent falling
 
         // Replace the value below with the actual x-scale of your platform
-        platformWidth = 3.2077f;
+        platformWidth = 4.0f;
     }
 
     void FixedUpdate()
@@ -25,7 +28,7 @@ public class Simple_Movement : MonoBehaviour
 
     void Move()
     {
-        float horizontalMovement = isFacingRight ? 1 : -1;
+        float horizontalMovement = isFacingRight ? 2 : -2;
         Vector2 targetVelocity = new Vector2(horizontalMovement * speed, rigidbody.velocity.y);
         rigidbody.velocity = targetVelocity;
 
@@ -38,11 +41,12 @@ public class Simple_Movement : MonoBehaviour
 
     bool ShouldFlip()
     {
-        float raycastDistance = 0.2f; // Adjust this value based on your platform's scale
-        float raycastDirection = isFacingRight ? 1f : -1f;
-        Vector2 raycastOrigin = transform.position + Vector3.right * (raycastDirection * platformWidth / 2);
+        float raycastDistance = 0.3f; // Adjust this value based on your platform's scale
+        float raycastDirection = isFacingRight ? 2f : -2f;
+        Vector2 raycastOrigin = transform.position + Vector3.right * (raycastDirection * platformWidth / 4);
 
-        RaycastHit2D hit = Physics2D.Raycast(raycastOrigin, Vector2.down, raycastDistance);
+        // Use LayerMask to exclude the player's layer
+        RaycastHit2D hit = Physics2D.Raycast(raycastOrigin, Vector2.down, raycastDistance, ~obstacleLayerMask);
 
         // Check if the object it hits is tagged as "Flag"
         if (hit.collider != null && hit.collider.CompareTag("Flag"))
@@ -57,8 +61,8 @@ public class Simple_Movement : MonoBehaviour
         }
 
         // Check if there's an obstacle in front
-        Vector2 obstacleCheckOrigin = transform.position + Vector3.right * (raycastDirection * platformWidth / 2 + raycastDirection * 0.2f);
-        RaycastHit2D obstacleHit = Physics2D.Raycast(obstacleCheckOrigin, new Vector2(raycastDirection, 0), raycastDistance);
+        Vector2 obstacleCheckOrigin = transform.position + Vector3.right * (raycastDirection * platformWidth / 4 + raycastDirection * 0.4f);
+        RaycastHit2D obstacleHit = Physics2D.Raycast(obstacleCheckOrigin, new Vector2(raycastDirection, 0), raycastDistance, ~obstacleLayerMask);
 
         return obstacleHit.collider != null;
     }
