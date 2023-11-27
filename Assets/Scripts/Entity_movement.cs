@@ -16,7 +16,7 @@ public class EntityMovement : MonoBehaviour
     private void Awake()
     {
         rigidbody = GetComponent<Rigidbody2D>();
-        enabled = false;
+        enabled = true;
     }
 
     private void FixedUpdate()
