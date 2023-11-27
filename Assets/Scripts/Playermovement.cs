@@ -22,7 +22,7 @@ public class PlayerMovement : MonoBehaviour
         // Player movement
         float horizontalInput = Input.GetAxis("Horizontal");
         rb.velocity = new Vector2(horizontalInput * speed, rb.velocity.y);
-        if (rb.velocity.x > 0 && isGrounded)
+        if (rb.velocity.x != 0 && isGrounded)
         {
             myAnimator.SetBool("isWalking", true);
         }
