@@ -6,12 +6,15 @@ public class PlayerMovement : MonoBehaviour
     public float jumpForce = 17f;
     private bool isFacingRight = true;
     private Rigidbody2D rb;
+    private Animator myAnimator;
     private bool isGrounded;
 
     void Awake()
     {
         rb = GetComponent<Rigidbody2D>();
         rb.freezeRotation = true; // Freeze rotation along all axes
+
+        myAnimator = GetComponent<Animator>();
     }
 
     void Update()
@@ -20,14 +23,15 @@ public class PlayerMovement : MonoBehaviour
         float horizontalInput = Input.GetAxis("Horizontal");
         rb.velocity = new Vector2(horizontalInput * speed, rb.velocity.y);
 
+
         // Jumping
         if (Input.GetButtonDown("Jump") && isGrounded)
         {
+            //myAnimator.SetBool("isJumping", true);
             rb.AddForce(Vector2.up * jumpForce, ForceMode2D.Impulse);
             isGrounded = false; // Uncomment or add this line
         }
-
-
+        
 
         Flip(horizontalInput);
     }
