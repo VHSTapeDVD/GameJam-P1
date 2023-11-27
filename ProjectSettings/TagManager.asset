@@ -3,13 +3,7 @@
 --- !u!78 &1
 TagManager:
   serializedVersion: 2
-  tags:
-  - Ground
-  - Spider
-  - Snake
-  - Flag
-  - Cactus
-  - Speder
+  tags: []
   layers:
   - Default
   - TransparentFX
@@ -17,7 +11,7 @@ TagManager:
   - 
   - Water
   - UI
-  - Ground
+  - 
   - 
   - 
   - 
@@ -46,10 +40,4 @@ TagManager:
   m_SortingLayers:
   - name: Default
     uniqueID: 0
-    locked: 0
-  - name: BG
-    uniqueID: 2237715057
-    locked: 0
-  - name: Objects
-    uniqueID: 492569559
     locked: 0
