@@ -5,29 +5,22 @@ using UnityEngine.SceneManagement;
 
 public class PlayerHealth : MonoBehaviour
 {
-    public int maxhealth = 1;
-    public int health;
+    // Private variable for the players health
+    private int health;
 
-    void Awake()
+    // Public method called with the players dealth
+    public void Die()
     {
-        health = maxhealth;
-    }
+        // The players health is set to 0
+        health = 0;
 
-    public void TakeDamage(float damage)
-    {
-
-        int roundedDamage = Mathf.RoundToInt(damage);
-
-        health -= roundedDamage;
-
-
+        // Checking if the players health is less than or equal to 0
         if (health <= 0)
         {
+            //Destroy the gameobject if health is 0
             Destroy(gameObject);
-        }
 
-        if (health <= 0)
-        {
+            // Load the GameOver scene with Unity's SceneManager
             SceneManager.LoadScene("GameOver");
         }
     }

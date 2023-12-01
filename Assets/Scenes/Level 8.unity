@@ -586,7 +586,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9abcc5fc06b9078469f842fe2afb4834, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  damage: 1
   playerHealth: {fileID: 1745362334}
 --- !u!66 &349485946
 CompositeCollider2D:
@@ -1417,33 +1416,8 @@ Tilemap:
       m_TileObjectToInstantiateIndex: 65535
       dummyAlignment: 0
       m_AllTileFlags: 0
-  - first: {x: 5, y: -5, z: 0}
-    second:
-      serializedVersion: 2
-      m_TileIndex: 4
-      m_TileSpriteIndex: 4
-      m_TileMatrixIndex: 0
-      m_TileColorIndex: 0
-      m_TileObjectToInstantiateIndex: 65535
-      dummyAlignment: 0
-      m_AllTileFlags: 0
   m_AnimatedTiles:
   - first: {x: -3, y: -5, z: 0}
-    second:
-      serializedVersion: 2
-      m_AnimatedSprites:
-      - {fileID: 266379837, guid: 6ba18a2212b9947628de5962b6f6dfe3, type: 3}
-      - {fileID: -1475769535, guid: 6ba18a2212b9947628de5962b6f6dfe3, type: 3}
-      - {fileID: -1619986669, guid: 6ba18a2212b9947628de5962b6f6dfe3, type: 3}
-      - {fileID: 1800795015, guid: 6ba18a2212b9947628de5962b6f6dfe3, type: 3}
-      - {fileID: -326679313, guid: 6ba18a2212b9947628de5962b6f6dfe3, type: 3}
-      - {fileID: 808043261, guid: 6ba18a2212b9947628de5962b6f6dfe3, type: 3}
-      - {fileID: 248816517, guid: 6ba18a2212b9947628de5962b6f6dfe3, type: 3}
-      - {fileID: 1617381515, guid: 6ba18a2212b9947628de5962b6f6dfe3, type: 3}
-      m_AnimationSpeed: 8
-      m_AnimationTimeOffset: 0
-      m_Flags: 0
-  - first: {x: 5, y: -5, z: 0}
     second:
       serializedVersion: 2
       m_AnimatedSprites:
@@ -1467,7 +1441,7 @@ Tilemap:
     m_Data: {fileID: 0}
   - m_RefCount: 0
     m_Data: {fileID: 0}
-  - m_RefCount: 2
+  - m_RefCount: 1
     m_Data: {fileID: 11400000, guid: 2e545116c56094114b3245e4c7b6afc0, type: 2}
   m_TileSpriteArray:
   - m_RefCount: 0
@@ -1478,10 +1452,10 @@ Tilemap:
     m_Data: {fileID: 0}
   - m_RefCount: 0
     m_Data: {fileID: 0}
-  - m_RefCount: 2
+  - m_RefCount: 1
     m_Data: {fileID: 1617381515, guid: 6ba18a2212b9947628de5962b6f6dfe3, type: 3}
   m_TileMatrixArray:
-  - m_RefCount: 2
+  - m_RefCount: 1
     m_Data:
       e00: 1
       e01: 0
@@ -1500,7 +1474,7 @@ Tilemap:
       e32: 0
       e33: 1
   m_TileColorArray:
-  - m_RefCount: 2
+  - m_RefCount: 1
     m_Data: {r: 1, g: 1, b: 1, a: 1}
   m_TileObjectToInstantiateArray: []
   m_AnimationFrameRate: 1
@@ -1667,7 +1641,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9abcc5fc06b9078469f842fe2afb4834, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  damage: 1
   playerHealth: {fileID: 1745362334}
 --- !u!251 &1338967952
 PlatformEffector2D:
@@ -2975,8 +2948,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6a985ddc12bdfdb4f80f5cca80533676, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxhealth: 1
-  health: 0
 --- !u!114 &1745362335
 MonoBehaviour:
   m_ObjectHideFlags: 0

@@ -1217,7 +1217,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9abcc5fc06b9078469f842fe2afb4834, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  damage: 1
   playerHealth: {fileID: 1437152235}
 --- !u!66 &393110725
 CompositeCollider2D:
@@ -2666,8 +2665,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6a985ddc12bdfdb4f80f5cca80533676, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxhealth: 1
-  health: 0
 --- !u!114 &1437152236
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2894,7 +2891,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6b3d1e96abad7d546b538110b67c77c4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  bounceForce: 5
+  bounceForce: 2
 --- !u!66 &1895649345
 CompositeCollider2D:
   m_ObjectHideFlags: 0
