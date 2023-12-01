@@ -751,11 +751,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 07052b7d3b156471cbc32c78c19831b5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  gameOver: {fileID: 0}
-  KangeeHead0: {fileID: 0}
   KangeeHead1: {fileID: 0}
   KangeeHead2: {fileID: 0}
   KangeeHead3: {fileID: 0}
+  gameOver: {fileID: 0}
+  health: 0
 --- !u!4 &905802524
 Transform:
   m_ObjectHideFlags: 0
