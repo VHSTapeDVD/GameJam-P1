@@ -632,7 +632,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9abcc5fc06b9078469f842fe2afb4834, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  damage: 1
   playerHealth: {fileID: 1919670386}
 --- !u!251 &679462859
 PlatformEffector2D:
@@ -1910,8 +1909,8 @@ Tilemap:
   - first: {x: -5, y: -7, z: 0}
     second:
       serializedVersion: 2
-      m_TileIndex: 10
-      m_TileSpriteIndex: 10
+      m_TileIndex: 4
+      m_TileSpriteIndex: 4
       m_TileMatrixIndex: 0
       m_TileColorIndex: 0
       m_TileObjectToInstantiateIndex: 65535
@@ -2707,7 +2706,7 @@ Tilemap:
     m_Data: {fileID: 11400000, guid: 22392ad8a4c0d42edaad3fa2fa42b0ab, type: 2}
   - m_RefCount: 1
     m_Data: {fileID: 11400000, guid: 8e1aea50c3c534df994b7c24b9ff3d54, type: 2}
-  - m_RefCount: 2
+  - m_RefCount: 3
     m_Data: {fileID: 11400000, guid: cfcdd80c6c93b4dcdb584f27e7d66f46, type: 2}
   - m_RefCount: 8
     m_Data: {fileID: 11400000, guid: f7d324336709f46ecb5fb338ce7cddf5, type: 2}
@@ -2719,7 +2718,7 @@ Tilemap:
     m_Data: {fileID: 11400000, guid: 9cde0c2ab9a5744b6a42970cff9981d1, type: 2}
   - m_RefCount: 2
     m_Data: {fileID: 11400000, guid: 5cf3c6cf109f640d58c8ebfdfb63aa7d, type: 2}
-  - m_RefCount: 67
+  - m_RefCount: 66
     m_Data: {fileID: 11400000, guid: 252d29096c0da499293942418815e963, type: 2}
   m_TileSpriteArray:
   - m_RefCount: 0
@@ -2730,7 +2729,7 @@ Tilemap:
     m_Data: {fileID: -1697586167, guid: cfefc933683d04c549a634662846750b, type: 3}
   - m_RefCount: 1
     m_Data: {fileID: 1297916471, guid: cfefc933683d04c549a634662846750b, type: 3}
-  - m_RefCount: 2
+  - m_RefCount: 3
     m_Data: {fileID: -1276845821, guid: cfefc933683d04c549a634662846750b, type: 3}
   - m_RefCount: 8
     m_Data: {fileID: 679909224, guid: cfefc933683d04c549a634662846750b, type: 3}
@@ -2742,7 +2741,7 @@ Tilemap:
     m_Data: {fileID: -1812694544, guid: cfefc933683d04c549a634662846750b, type: 3}
   - m_RefCount: 2
     m_Data: {fileID: 1730452547, guid: cfefc933683d04c549a634662846750b, type: 3}
-  - m_RefCount: 67
+  - m_RefCount: 66
     m_Data: {fileID: 1147941081, guid: cfefc933683d04c549a634662846750b, type: 3}
   m_TileMatrixArray:
   - m_RefCount: 111
@@ -3649,8 +3648,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6a985ddc12bdfdb4f80f5cca80533676, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxhealth: 1
-  health: 0
 --- !u!114 &1919670387
 MonoBehaviour:
   m_ObjectHideFlags: 0
