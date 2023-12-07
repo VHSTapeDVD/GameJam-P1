@@ -9,6 +9,7 @@ TagManager:
   - Cactus
   - Spider
   - speder
+  - Cube
   layers:
   - Default
   - TransparentFX
@@ -16,10 +17,10 @@ TagManager:
   - Player
   - Water
   - UI
-  - 
-  - 
-  - 
-  - 
+  - Ground
+  - Cube
+  - Flag
+  - Cactus
   - 
   - 
   - 

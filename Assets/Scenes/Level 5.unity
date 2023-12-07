@@ -3998,11 +3998,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7878350319992209165, guid: 316e160837afb974ea25b47159f66588, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 9.13
+      value: 3.93
       objectReference: {fileID: 0}
     - target: {fileID: 7878350319992209165, guid: 316e160837afb974ea25b47159f66588, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -4.07
+      value: -2.1
       objectReference: {fileID: 0}
     - target: {fileID: 7878350319992209165, guid: 316e160837afb974ea25b47159f66588, type: 3}
       propertyPath: m_LocalPosition.z
@@ -4146,9 +4146,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 1
-  obstacleLayerMask:
+  groundLayerMask:
     serializedVersion: 2
-    m_Bits: 8
+    m_Bits: 64
 --- !u!1001 &2003611118
 PrefabInstance:
   m_ObjectHideFlags: 0
