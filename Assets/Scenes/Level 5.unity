@@ -777,8 +777,8 @@ CapsuleCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
-  m_Size: {x: 0.7, y: 1}
+  m_Offset: {x: -0.012802124, y: -0.012737632}
+  m_Size: {x: 0.4980526, y: 1.1540377}
   m_Direction: 0
 --- !u!1 &881527124
 GameObject:
@@ -2205,9 +2205,9 @@ GameObject:
   - component: {fileID: 1255140312}
   - component: {fileID: 1255140311}
   - component: {fileID: 1255140310}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Cactus
-  m_TagString: Untagged
+  m_TagString: Cactus
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -3998,11 +3998,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7878350319992209165, guid: 316e160837afb974ea25b47159f66588, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 8.4
+      value: 9.13
       objectReference: {fileID: 0}
     - target: {fileID: 7878350319992209165, guid: 316e160837afb974ea25b47159f66588, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -4.05
+      value: -4.07
       objectReference: {fileID: 0}
     - target: {fileID: 7878350319992209165, guid: 316e160837afb974ea25b47159f66588, type: 3}
       propertyPath: m_LocalPosition.z
@@ -4051,7 +4051,7 @@ PrefabInstance:
       addedObject: {fileID: 1730465542}
     - targetCorrespondingSourceObject: {fileID: -2253911629886400664, guid: 316e160837afb974ea25b47159f66588, type: 3}
       insertIndex: -1
-      addedObject: {fileID: 1730465551}
+      addedObject: {fileID: 1730465555}
   m_SourcePrefab: {fileID: -8435245712485981826, guid: 316e160837afb974ea25b47159f66588, type: 3}
 --- !u!1 &1730465541 stripped
 GameObject:
@@ -4133,7 +4133,7 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 4
---- !u!114 &1730465551
+--- !u!114 &1730465555
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -4142,7 +4142,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 1730465541}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4d1efd9debdeb4e96ab017c8add84ac0, type: 3}
+  m_Script: {fileID: 11500000, guid: 154e3175eb44a4ab0a368de6a4614c9a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 1
@@ -4350,7 +4350,7 @@ GameObject:
   - component: {fileID: 2029260670}
   - component: {fileID: 2029260672}
   - component: {fileID: 2029260671}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: EndFlag
   m_TagString: Flag
   m_Icon: {fileID: 0}

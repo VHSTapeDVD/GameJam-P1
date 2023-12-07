@@ -1,73 +1,52 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
-public class Spoder_movement : MonoBehaviour
+public class EnemyMovement : MonoBehaviour
 {
-    public float speed = 1f;
-    private new Rigidbody2D rigidbody;
+    public float speed = 5f;  // Adjust this value to set the speed of the enemy
+    public Transform groundCheck;  // Attach an empty GameObject to the bottom of the enemy to check if it's grounded
+    public LayerMask groundLayer;  // Set this layer to the one your ground objects belong to
+
+    private Rigidbody2D rb;
     private bool isFacingRight = true;
-    private float platformWidth;
-    public LayerMask obstacleLayerMask; // Add a public LayerMask variable
+    private bool isGrounded;
 
-    void Start()
+    private void Start()
     {
-        rigidbody = GetComponent<Rigidbody2D>();
-        rigidbody.gravityScale = 0;
-
-        platformWidth = 3f;
+        rb = GetComponent<Rigidbody2D>();
     }
 
-    void FixedUpdate()
+    private void Update()
     {
-        Move();
-    }
+        // Check if the enemy is grounded
+        isGrounded = Physics2D.OverlapCircle(groundCheck.position, 0.1f, groundLayer);
 
-    void Move()
-    {
-        float horizontalMovement = isFacingRight ? 3 : -3; // Adjusted for more movement
-        Vector2 targetVelocity = new Vector2(horizontalMovement * speed, rigidbody.velocity.y);
-        rigidbody.velocity = targetVelocity;
-
-        // Check if the Spoder should flip
-        if (ShouldFlip())
+        // Flip the enemy if it reaches the edge of a platform
+        if (!isGrounded)
         {
             Flip();
         }
+
+        // Move the enemy
+        Move();
     }
 
-    bool ShouldFlip()
+    private void Move()
     {
-        float raycastDistance = 0.4f; // Adjust this value based on your platform's scale
-        float raycastDirection = isFacingRight ? 1f : -1f;
-        Vector2 raycastOrigin = transform.position + Vector3.right * (raycastDirection * platformWidth / 2);
-
-        RaycastHit2D hit = Physics2D.Raycast(raycastOrigin, Vector2.down, raycastDistance);
-
-        // Check if the object it hits is tagged as "Flag"
-        if (hit.collider != null && hit.collider.CompareTag("Flag"))
+        // Move the enemy horizontally
+        if (isFacingRight)
         {
-            return false; // Don't flip if it's a "Flag"
+            rb.velocity = new Vector2(speed, rb.velocity.y);
         }
-
-        // Check if the object it hits is tagged as "Untagged" or "Spoder"
-        if (hit.collider != null && (hit.collider.CompareTag("Untagged") || hit.collider.CompareTag("Spoder")))
+        else
         {
-            return true; // Flip if it's "Untagged" or "Spoder"
+            rb.velocity = new Vector2(-speed, rb.velocity.y);
         }
-
-        // Check if there's an obstacle in front
-        Vector2 obstacleCheckOrigin = transform.position + Vector3.right * (raycastDirection * platformWidth / 2 + raycastDirection * 0.2f);
-        RaycastHit2D obstacleHit = Physics2D.Raycast(obstacleCheckOrigin, new Vector2(raycastDirection, 0), raycastDistance);
-
-        return obstacleHit.collider != null;
     }
 
-    void Flip()
+    private void Flip()
     {
+        // Flip the enemy's facing direction
         isFacingRight = !isFacingRight;
-        Vector3 scale = transform.localScale;
-        scale.x *= -1;
-        transform.localScale = scale;
+        transform.localScale = new Vector3(-transform.localScale.x, transform.localScale.y, transform.localScale.z);
     }
 }
