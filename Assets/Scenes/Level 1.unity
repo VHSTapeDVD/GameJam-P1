@@ -2238,7 +2238,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9abcc5fc06b9078469f842fe2afb4834, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  damage: 3
   playerHealth: {fileID: 1531650342}
 --- !u!114 &1363113326
 MonoBehaviour:
@@ -2446,8 +2445,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6a985ddc12bdfdb4f80f5cca80533676, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxhealth: 1
-  health: 0
 --- !u!114 &1531650343
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2850,7 +2847,13 @@ CompositeCollider2D:
   m_ColliderPaths:
   - m_Collider: {fileID: 1739681821}
     m_ColliderPaths:
-    - - X: -312500
+    - - X: -3125000
+        Y: -41562500
+      - X: -3125000
+        Y: -40000000
+      - X: -1875000
+        Y: -40000000
+      - X: -312500
         Y: -35000000
       - X: -312500
         Y: -30937500
@@ -2864,8 +2867,14 @@ CompositeCollider2D:
         Y: -38750000
       - X: -8125000
         Y: -40000000
-      - X: -1875000
+      - X: -6875000
         Y: -40000000
+      - X: -6875000
+        Y: -41562500
+      - X: -5625000
+        Y: -42812500
+      - X: -4375000
+        Y: -42812500
     - - X: 107187504
         Y: -40937500
       - X: 107187504
@@ -2880,7 +2889,10 @@ CompositeCollider2D:
         Y: -41875000
   m_CompositePaths:
     m_Paths:
-    - - {x: -0.1875203, y: -4}
+    - - {x: -0.43751082, y: -4.28125}
+      - {x: -0.3125, y: -4.156239}
+      - {x: -0.31247061, y: -4}
+      - {x: -0.1874939, y: -3.999981}
       - {x: -0.03125, y: -3.4999964}
       - {x: -0.0312649, y: -3.0937424}
       - {x: -0.2187559, y: -3}
@@ -2888,6 +2900,9 @@ CompositeCollider2D:
       - {x: -0.96875, y: -3.4062557}
       - {x: -0.9687401, y: -3.875008}
       - {x: -0.812491, y: -4}
+      - {x: -0.6875, y: -4.0000296}
+      - {x: -0.68749243, y: -4.1562576}
+      - {x: -0.5624892, y: -4.28125}
     - - {x: 10.624989, y: -4.1875}
       - {x: 10.718751, y: -4.093739}
       - {x: 10.718721, y: -4}
@@ -3019,6 +3034,16 @@ Tilemap:
   m_GameObject: {fileID: 1739681816}
   m_Enabled: 1
   m_Tiles:
+  - first: {x: -1, y: -5, z: 0}
+    second:
+      serializedVersion: 2
+      m_TileIndex: 1
+      m_TileSpriteIndex: 1
+      m_TileMatrixIndex: 0
+      m_TileColorIndex: 0
+      m_TileObjectToInstantiateIndex: 65535
+      dummyAlignment: 0
+      m_AllTileFlags: 1073741825
   - first: {x: 10, y: -5, z: 0}
     second:
       serializedVersion: 2
@@ -3068,8 +3093,8 @@ Tilemap:
   m_TileAssetArray:
   - m_RefCount: 0
     m_Data: {fileID: 0}
-  - m_RefCount: 0
-    m_Data: {fileID: 0}
+  - m_RefCount: 1
+    m_Data: {fileID: 11400000, guid: a0b077f51991545ea8397f8b5e2dac2d, type: 2}
   - m_RefCount: 1
     m_Data: {fileID: 11400000, guid: 950ca76c380db4861b2b8d891f5f9e22, type: 2}
   - m_RefCount: 1
@@ -3079,8 +3104,8 @@ Tilemap:
   m_TileSpriteArray:
   - m_RefCount: 0
     m_Data: {fileID: 0}
-  - m_RefCount: 0
-    m_Data: {fileID: 0}
+  - m_RefCount: 1
+    m_Data: {fileID: -1896377479, guid: cfefc933683d04c549a634662846750b, type: 3}
   - m_RefCount: 1
     m_Data: {fileID: 1332937530, guid: cfefc933683d04c549a634662846750b, type: 3}
   - m_RefCount: 1
@@ -3088,7 +3113,7 @@ Tilemap:
   - m_RefCount: 1
     m_Data: {fileID: -1135109951, guid: 7e9f8ede86569422c9ffb6fa12418f04, type: 3}
   m_TileMatrixArray:
-  - m_RefCount: 3
+  - m_RefCount: 4
     m_Data:
       e00: 1
       e01: 0
@@ -3107,7 +3132,7 @@ Tilemap:
       e32: 0
       e33: 1
   m_TileColorArray:
-  - m_RefCount: 3
+  - m_RefCount: 4
     m_Data: {r: 1, g: 1, b: 1, a: 1}
   m_TileObjectToInstantiateArray: []
   m_AnimationFrameRate: 1
@@ -3145,7 +3170,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9abcc5fc06b9078469f842fe2afb4834, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  damage: 1
   playerHealth: {fileID: 1531650342}
 --- !u!1 &2031168281
 GameObject:
