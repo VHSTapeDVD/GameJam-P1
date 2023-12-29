@@ -34,7 +34,7 @@ public class PlayerMovement : MonoBehaviour
         {
             myAnimator.SetBool("isJumping", true);
             rb.AddForce(Vector2.up * jumpForce, ForceMode2D.Impulse);
-            isGrounded = false; // Uncomment or add this line
+            isGrounded = false; 
         }
         
 
