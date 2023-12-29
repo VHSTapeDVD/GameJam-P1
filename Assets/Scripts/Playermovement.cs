@@ -51,6 +51,8 @@ public class PlayerMovement : MonoBehaviour
         }
     }
 
+
+    
     private void Flip(float horizontalInput)
     {
         // Check if the direction has changed
