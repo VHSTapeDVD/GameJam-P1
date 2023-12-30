@@ -18,7 +18,7 @@ public class Level2snake : MonoBehaviour
         rigidbody = GetComponent<Rigidbody2D>();
         rigidbody.gravityScale = 0;
 
-        platformWidth = 3.5f;
+        platformWidth = 2f;
     }
 
     void FixedUpdate()

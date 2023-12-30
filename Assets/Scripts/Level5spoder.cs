@@ -34,7 +34,7 @@ public class Level5spoder : MonoBehaviour
 
     bool ShouldFlip()
     {
-        float raycastDistance = 0.3f;
+        float raycastDistance = 0.4f;
         float raycastDirection = isFacingRight ? 1f : -1f;
         Vector2 raycastOrigin = transform.position + Vector3.right * (raycastDirection * platformWidth / 2);
 
