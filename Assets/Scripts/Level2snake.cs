@@ -39,6 +39,10 @@ public class Level2snake : MonoBehaviour
         }
     }
 
+    /// <summary>
+    /// Checks if the enemy should turn around
+    /// </summary>
+    /// <returns></returns>
     bool ShouldFlip()
     {
         float raycastDistance = 0.3f;
@@ -67,7 +71,8 @@ public class Level2snake : MonoBehaviour
         return obstacleHit.collider != null;
     }
 
-    void Flip()
+  
+    private void Flip()
     {
         isFacingRight = !isFacingRight;
         Vector3 scale = transform.localScale;

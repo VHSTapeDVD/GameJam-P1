@@ -8,7 +8,9 @@ public class PlayerHealth : MonoBehaviour
     // Private variable for the players health
     private int health;
 
-    // Public method called with the players dealth
+    /// <summary>
+    /// Resets player health, destroys the player gameobject and loads the GameOver scene
+    /// </summary>
     public void Die()
     {
         // The players health is set to 0
