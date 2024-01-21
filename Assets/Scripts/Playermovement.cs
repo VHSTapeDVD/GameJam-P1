@@ -1,70 +1,90 @@
 using UnityEngine;
+using UnityEngine.InputSystem;
 
 public class PlayerMovement : MonoBehaviour
 {
-    public float speed = 7f;
-    public float jumpForce = 17f;
-    private bool isFacingRight = true;
+    [SerializeField] private float speed = 7f;
+    [SerializeField] private float jumpForce = 17f;
+    [SerializeField] private LayerMask groundLayer;
+
     private Rigidbody2D rb;
-    private Animator myAnimator;
-    private bool isGrounded;
+    private Animator animator;
+    private SpriteRenderer spriteRenderer;
+    private bool grounded;
 
     void Awake()
     {
         rb = GetComponent<Rigidbody2D>();
-        rb.freezeRotation = true; // Freeze rotation along all axes
+        if (rb == null) Debug.LogError("Rigidbody2D component is missing!");
 
-        myAnimator = GetComponent<Animator>();
+        animator = GetComponent<Animator>();
+        if (animator == null) Debug.LogError("Animator component is missing!");
+
+        spriteRenderer = GetComponent<SpriteRenderer>();
+        if (spriteRenderer == null) Debug.LogError("SpriteRenderer component is missing!");
     }
 
-    void Update()
+    void FixedUpdate()
     {
-        // Player movement
-        float horizontalInput = Input.GetAxis("Horizontal");
-        rb.velocity = new Vector2(horizontalInput * speed, rb.velocity.y);
-        if (rb.velocity.x != 0 && isGrounded)
-        {
-            myAnimator.SetBool("isWalking", true);
-        }
-        else
-            myAnimator.SetBool("isWalking", false);
+        HandleMovement();
+        HandleJump();
+    }
 
-        // Jumping
-        if (Input.GetButtonDown("Jump") && isGrounded)
+    void HandleMovement()
+    {
+        rb.velocity = new Vector2(GetMovementInput().x * speed, rb.velocity.y);
+        UpdateAnimator();
+        FlipSprite();
+    }
+
+    void HandleJump()
+    {
+        if (grounded && ShouldJump())
         {
-            myAnimator.SetBool("isJumping", true);
+            rb.velocity = new Vector2(rb.velocity.x, 0);
             rb.AddForce(Vector2.up * jumpForce, ForceMode2D.Impulse);
-            isGrounded = false; 
+            animator.SetBool("isJumping", true);
+            grounded = false;
         }
-        
+    }
 
-        Flip(horizontalInput);
+    Vector2 GetMovementInput()
+    {
+        return new Vector2(Input.GetAxisRaw("Horizontal"), 0f);
+    }
+
+    void UpdateAnimator()
+    {
+        if (GetMovementInput().x != 0)
+            animator.SetFloat("x", GetMovementInput().x);
+        else
+            animator.SetBool("isWalking", false);
+    }
+
+    void FlipSprite()
+    {
+        spriteRenderer.flipX = GetMovementInput().x < 0f;
+    }
+
+    bool ShouldJump()
+    {
+        return Input.GetButtonDown("Jump");
     }
 
     void OnCollisionEnter2D(Collision2D collision)
     {
-        // Check if the player is grounded
         if (collision.gameObject.CompareTag("Ground"))
         {
-            isGrounded = true;
-            myAnimator.SetBool("isJumping", false);
+            grounded = true;
+            animator.SetBool("isJumping", false);
         }
     }
 
-
-    
-    private void Flip(float horizontalInput)
+    void OnCollisionExit2D(Collision2D collision)
     {
-        // Check if the direction has changed
-        if ((horizontalInput > 0 && !isFacingRight) || (horizontalInput < 0 && isFacingRight))
+        if (!Physics2D.OverlapCircle(transform.position, 0.1f, groundLayer))
         {
-            isFacingRight = !isFacingRight;
-
-            // Flip the player's sprite
-            Vector3 localScale = transform.localScale;
-            localScale.x *= -1f;
-            transform.localScale = localScale;
+            grounded = false;
         }
     }
-
 }
